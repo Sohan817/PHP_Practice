@@ -7,7 +7,10 @@
 </head>
 <body>
     <?php
-        echo "Hello World";
+         echo "Hello World";
     ?>
+    <?php if(true){ ?>
+        <p>Hello PHP</p>
+    <?php } ?>
 </body>
 </html>
