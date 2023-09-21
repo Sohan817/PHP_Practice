@@ -8,28 +8,20 @@
  </head>
 
  <body>
-   <!-- SERVER super global variable -->
-   <?php
-    echo $_SERVER['DOCUMENT_ROOT'];
-    echo "<br>";
-    echo $_SERVER['PHP_SELF'];
-    echo "<br>";
-    echo $_SERVER['SERVER_NAME'];
-    echo "<br>";
-    echo $_SERVER['REQUEST_METHOD'];
-    ?>
-   <!-- GET and POSST suuper global variable -->
-   <?php
-    echo $_GET['name'];
-    echo $_GET['eyecolor'];
-    echo "<br>";
-    echo $_REQUEST['name'];
-    echo "<br>";
-    echo $_COOKIE['name'];
-    echo "<br>";
-    $_SESSION['username'] = "Sohan";
-    echo $_SESSION['username'];
-    ?>
+   <form action="include/formhandler.php" method="post">
+     <label for="firstname">First Name</label>
+     <input type="text" id="firstname" name="firstname" placeholder="Enter First Name"><br><br>
+     <label for="lastname">Last Name</label>
+     <input type="text" id="lastname" name="lastname" placeholder="Enter Last Name"><br><br>
+     <label for="favouritepet">Favourite Pet </label>
+     <select name="favouritepet" id="favouritepet">
+       <option value="none">None</option>
+       <option value="dog">Dog</option>
+       <option value="cat">Cat</option>
+       <option value="bird">Bird</option>
+     </select>
+     <button type="submit">Submit</button>
+   </form>
  </body>
 
  </html>
