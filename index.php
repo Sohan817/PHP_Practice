@@ -8,20 +8,41 @@
  </head>
 
  <body>
-   <form action="include/formhandler.php" method="post">
-     <label for="firstname">First Name</label>
-     <input type="text" id="firstname" name="firstname" placeholder="Enter First Name"><br><br>
-     <label for="lastname">Last Name</label>
-     <input type="text" id="lastname" name="lastname" placeholder="Enter Last Name"><br><br>
-     <label for="favouritepet">Favourite Pet </label>
-     <select name="favouritepet" id="favouritepet">
-       <option value="none">None</option>
-       <option value="dog">Dog</option>
-       <option value="cat">Cat</option>
-       <option value="bird">Bird</option>
-     </select>
-     <button type="submit">Submit</button>
-   </form>
+   <?php
+    //String operator
+    $a = "Hello";
+    $b = "World!";
+    $c = $a . " " . $b;
+    echo $c;
+    echo "<br>";
+    //Arithmetic operator
+    echo 1 + 2 * 4;
+    echo "<br>";
+    //Assignment Operator
+    $a = 2;
+    $a += 4;
+    echo $a;
+    echo "<br>";
+    //comperisn operator
+    $c = 2;
+    $d = 2;
+    $e = 4;
+    $f = 5;
+    if ($c == $d) {
+      echo "This Statemnt is true";
+    }
+    echo "<br>";
+    //Logical Operator
+    if ($c == $d && $e < $f || $a <> $c) {
+      echo "This Statemnt is true";
+    }
+    echo "<br>";
+    //Increment and decrement operator
+    $x = 1;
+    echo ++$x;
+    echo $x++;
+    echo $x;
+    ?>
  </body>
 
  </html>
