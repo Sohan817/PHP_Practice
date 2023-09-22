@@ -9,39 +9,38 @@
 
  <body>
    <?php
-    //String operator
-    $a = "Hello";
-    $b = "World!";
-    $c = $a . " " . $b;
-    echo $c;
-    echo "<br>";
-    //Arithmetic operator
-    echo 1 + 2 * 4;
-    echo "<br>";
-    //Assignment Operator
-    $a = 2;
-    $a += 4;
-    echo $a;
-    echo "<br>";
-    //comperisn operator
-    $c = 2;
-    $d = 2;
-    $e = 4;
-    $f = 5;
-    if ($c == $d) {
-      echo "This Statemnt is true";
+    //If else statement
+    $a = 1;
+    $b = 2;
+    $bool = true;
+
+    if ($a < $b && !$bool) {
+      echo "First statement is true";
+    } else if ($a < $b && $bool) {
+      echo "Second statement is true";
+    } else {
+      echo "Third statement is true";
     }
     echo "<br>";
-    //Logical Operator
-    if ($c == $d && $e < $f || $a <> $c) {
-      echo "This Statemnt is true";
+    //Switch 
+    switch ($a) {
+      case 1:
+        echo "First statement is true";
+        break;
+      case 2:
+        echo "Second statement is true";
+        break;
+      default:
+        echo "Third statement is true";
     }
     echo "<br>";
-    //Increment and decrement operator
-    $x = 1;
-    echo ++$x;
-    echo $x++;
-    echo $x;
+    //Match statement
+    $result = match ($a) {
+      1, 3, 5 => "Var a is one",
+      2 => "Var a is two",
+      default => "None were to return"
+    };
+    echo $result
     ?>
  </body>
 
