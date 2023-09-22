@@ -10,59 +10,53 @@
  </head>
 
  <body>
-   <div class="container text-center" style="width: 12rem;">
-     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
-       <input type="number" name="num1" class="form-control" placeholder="Enter first Number" required><br><br>
-       <select name="operator">
-         <option value="addition">+</option>
-         <option value="substraction">-</option>
-         <option value="multiply">*</option>
-         <option value="divition">/</option>
-       </select><br><br>
-       <input type="number" name="num2" class="form-control" placeholder="Enter second Number" required><br><br>
-       <button class="btn btn-primary">Calculate</button>
-     </form>
-   </div>
    <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      //Grab data from inputs
-      $num1 = filter_input(INPUT_POST, "num1", FILTER_SANITIZE_NUMBER_FLOAT);
-      $num2 = filter_input(INPUT_POST, "num2", FILTER_SANITIZE_NUMBER_FLOAT);
-      $operator = htmlspecialchars($_POST["operator"]);
-      //Error Handlers
-      $error = false;
-      if (empty($num1) || empty($num1) || empty($operator)) {
-        echo "<br>";
-        echo "<p class='text-center'>Fill in all fields</p>";
-        $error = true;
-      }
-      if (is_numeric($num1) || is_numeric($num2)) {
-        echo "<br>";
-        echo "<p class='text-center'>Only write number</p>";
-        $error = true;
-      }
-      //Calculate the number if no errors
-      $value = 0;
-      switch ($operator) {
-        case "addition":
-          $value = $num1 + $num2;
-          break;
-        case "substraction":
-          $value = $num1 - $num2;
-          break;
-        case "multiply":
-          $value = $num1 * $num2;
-          break;
-        case "divition":
-          $value = $num1 / $num2;
-          break;
-        default:
-          echo "<p class='text-center'>Something went wrong</p>";
-          break;
-      }
-    }
-    echo "<p class='text-center'>Result of " . $operator . " = " . $value . "</p>";
+    $color = array("red", "green", "blue");
+    $fruites = ["Apple", "Mango", "Banana"];
+    $test = ["Orange", "Cherry"];
+    // //Delete an element in array
+    // unset($fruites[1]);
+    // //remove an element from array 
+    // array_splice($fruites, 0, 1);
+
+    // //add an element in array
+    // $fruites[] = "Orange";
+    array_push($color, "Black");
+    print_r($color);
+    // echo $fruites[1];
+    //Associative array
+    $tasks = [
+      "laundry" => "Sohan",
+      "trash" => "Nadim",
+      "cook" => "Suborna",
+      "Vacuum" => "Sohag"
+    ];
+    echo $tasks["laundry"];
+    //Assending sort
+    sort($tasks);
+    print_r($tasks);
+    //Array length
+    echo count($tasks);
+    //replaced and marged array
+    array_splice($fruites, 2, 0, $test);
+    print_r($fruites);
+
+    //Multidimentional array
+    $food = [
+      ["Apple", "Cherry", "Banana"],
+      "mango",
+      "Orange"
+    ];
+    echo $food[0][1];
+    //Associative multidimentional array
+    $foods = [
+      "fruites" => ["Apple", "Cherry", "Banana"],
+      "Vegetable" => ["Cucumber", "Potato"],
+      "meat" => ["beef", "chicken"]
+    ];
+    echo $foods["meat"][1];
     ?>
+
  </body>
 
  </html>
