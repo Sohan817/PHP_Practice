@@ -1,18 +1,54 @@
 <?php
+//Global scope var
+$test = "Sohan";
 
-declare(strict_types=1);
-function sayHello(string $name)
+function myFunction()
 {
-  return "Hello " . $name . "!";
+  //local scope var
+  $localVar = "Nadim";
+  //use of local vaer inside the function
+  return $localVar;
 }
-$test = sayHello("Sohan");
-echo $test;
+echo myFunction();
 
-echo "<br>";
-
-function addition(int $num1, int $num2)
+function myFunction1()
 {
-  $result = $num1 + $num2;
-  return $result;
+  //global var used in local scope
+  global $test;
+  //use of local var inside the function
+  return $test;
 }
-echo addition(2, 6);
+echo myFunction1();
+
+//using global var by super global variable
+$test1 = "Suborna";
+function myFunction2()
+{
+  //use of local var inside the function
+  return $GLOBALS["test1"];
+}
+echo myFunction2();
+
+//Static scope variable
+function staticScope()
+{
+  static $staticVar = 0;
+
+  $staticVar++;
+
+  return $staticVar;
+}
+echo staticScope();
+echo staticScope();
+
+//class scope 
+class Mycllass
+{
+  //define a class var
+  public $myVar = "Hello class";
+  //define a class function
+  public function myFunc()
+  {
+    return $this->myVar;
+  }
+}
