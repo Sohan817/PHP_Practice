@@ -1,62 +1,69 @@
- <!DOCTYPE html>
- <html lang="en">
+<?php
+$string = "Hello World!";
 
- <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
- </head>
- <title>Calculator</title>
- </head>
+//String length
+echo strlen($string);
+echo "<br>";
 
- <body>
-   <?php
-    $color = array("red", "green", "blue");
-    $fruites = ["Apple", "Mango", "Banana"];
-    $test = ["Orange", "Cherry"];
-    // //Delete an element in array
-    // unset($fruites[1]);
-    // //remove an element from array 
-    // array_splice($fruites, 0, 1);
+//string position
+echo strpos($string, "Wo");
+echo "<br>";
 
-    // //add an element in array
-    // $fruites[] = "Orange";
-    array_push($color, "Black");
-    print_r($color);
-    // echo $fruites[1];
-    //Associative array
-    $tasks = [
-      "laundry" => "Sohan",
-      "trash" => "Nadim",
-      "cook" => "Suborna",
-      "Vacuum" => "Sohag"
-    ];
-    echo $tasks["laundry"];
-    //Assending sort
-    sort($tasks);
-    print_r($tasks);
-    //Array length
-    echo count($tasks);
-    //replaced and marged array
-    array_splice($fruites, 2, 0, $test);
-    print_r($fruites);
+//Replace string
+echo str_replace("World", "Sohan", $string);
+echo "<br>";
 
-    //Multidimentional array
-    $food = [
-      ["Apple", "Cherry", "Banana"],
-      "mango",
-      "Orange"
-    ];
-    echo $food[0][1];
-    //Associative multidimentional array
-    $foods = [
-      "fruites" => ["Apple", "Cherry", "Banana"],
-      "Vegetable" => ["Cucumber", "Potato"],
-      "meat" => ["beef", "chicken"]
-    ];
-    echo $foods["meat"][1];
-    ?>
+//lowercase
+echo strtolower($string);
+echo "<br>";
 
- </body>
 
- </html>
+//uppercase
+echo strtoupper($string);
+echo "<br>";
+
+//substring
+echo substr($string, 2, 5);
+echo "<br>";
+
+//Explode string to array
+print_r(explode(" ", $string));
+echo "<br>";
+
+//Math function 
+$num = -5.5;
+echo abs($num);
+echo "<br>";
+echo round($num);
+echo "<br>";
+echo pow(2, 3);
+echo "<br>";
+echo sqrt(3);
+echo "<br>";
+echo rand(1, 100);
+echo "<br>";
+//Array function 
+$arr = ["Apple", "Mango", "Banana"];
+$arr1 = ["orange", "Cherry"];
+echo count($arr);
+echo "<br>";
+print_r(is_array($arr));
+echo "<br>";
+array_push($arr, "Orange");
+print_r($arr);
+echo "<br>";
+array_pop($arr);
+print_r($arr);
+echo "<br>";
+print_r(array_merge($arr, $arr1));
+echo "<br>";
+print_r(array_reverse($arr));
+echo "<br>";
+array_splice($arr, 2, 0, $arr1);
+print_r($arr);
+echo "<br>";
+//date and time
+echo date("Y-m-d H:i:s");
+echo "<br>";
+$times = "2023-09-23 12:00:00";
+echo strtotime($times);
