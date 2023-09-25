@@ -1,30 +1,24 @@
-<?php
-//for loop
-for ($i = 0; $i < 10; $i++) {
-  echo "This is for loop " . $i . "<br>";
-}
+<!DOCTYPE html>
+<html lang="en">
 
-//while lopp
-$test = 5;
-while ($test < 10) {
-  echo "This is while loop " . $test . "<br>";
-  $test++;
-}
-//do while loop
-$test = 10;
-do {
-  echo "This is do while loop " . $test . "<br>";
-  $test++;
-} while ($test < 10);
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<title>Document</title>
+</head>
 
-//foreach loop 
-$fruites1 = ["Apple", "Mango", "Banana"];
-foreach ($fruites1 as $fruite) {
-  echo "This is a " . $fruite . "<br>";
-}
+<body>
+  <div class="container text-center">
+    <h3>Sign up</h3>
+    <form action="database_connection/formhandler.inc.php" method="post">
+      <input type="text" name="username" placeholder="Enter username..."> <br><br>
+      <input type="password" name="pwd" placeholder="Enter password..."> <br><br>
+      <input type="text" name="email" placeholder="Enter email..."> <br><br>
+      <button class="btn btn-dark" type="submit">Sign up</button>
+    </form>
+  </div>
+</body>
 
-//foreach loop with asssociative array
-$fruites2 = ["Apple" => "Red", "Mango" => "Green", "Banana" => "Yellow"];
-foreach ($fruites2 as $fruite => $color) {
-  echo "This is a " . $fruite . ",Whose color is " . $color . "<br>";
-}
+</html>
