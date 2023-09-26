@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div class="container text-center">
+  <!-- <div class="container text-center">
     <h3>Sign up</h3>
     <form action="database_connection/formhandler.inc.php" method="post">
       <input type="text" name="username" placeholder="Enter username..."> <br><br>
@@ -35,7 +35,11 @@
       <input type="password" name="pwd" placeholder="Enter password..."> <br><br>
       <button class="btn btn-dark" type="submit">Delete</button>
     </form>
-  </div>
+  </div> -->
+  <form class="d-flex" role="search" action="search.php" method="post">
+    <input class="form-control me-2" type="text" name="usersearch" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
 </body>
 
 </html>
