@@ -1,14 +1,5 @@
 <?php
-//Start a session
-session_start();
-//Set a session
-$_SESSION['username'] = "Sohan";
-//End single session
-unset($_SESSION['username']);
-//End multiple session
-session_unset();
-//Destroy a session
-session_destroy();
+require_once 'config.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
