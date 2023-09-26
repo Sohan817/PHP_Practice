@@ -19,6 +19,23 @@
       <button class="btn btn-dark" type="submit">Sign up</button>
     </form>
   </div>
+  <div class="container text-center">
+    <h3>Update</h3>
+    <form action="database_connection/updatehandler.inc.php" method="post">
+      <input type="text" name="username" placeholder="Enter username..."> <br><br>
+      <input type="password" name="pwd" placeholder="Enter password..."> <br><br>
+      <input type="text" name="email" placeholder="Enter email..."> <br><br>
+      <button class="btn btn-dark" type="submit">Update</button>
+    </form>
+  </div>
+  <div class="container text-center">
+    <h3>Delete</h3>
+    <form action="database_connection/deletehandler.inc.php" method="post">
+      <input type="text" name="username" placeholder="Enter username..."> <br><br>
+      <input type="password" name="pwd" placeholder="Enter password..."> <br><br>
+      <button class="btn btn-dark" type="submit">Delete</button>
+    </form>
+  </div>
 </body>
 
 </html>
