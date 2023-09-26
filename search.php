@@ -9,7 +9,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $query = "SELECT * FROM comments WHERE username=:usersearch;";
         $stmt = $pdo->prepare($query);
         $stmt->bindParam(":usersearch", $usersearch);
-
         $stmt->execute();
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $pdo = null;
@@ -20,7 +19,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     header("Location: ../index.php");
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
